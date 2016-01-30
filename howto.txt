@@ -1,0 +1,3 @@
+> generate certificate and public key for use in serving hello world over SSL
+
+  $ go run /usr/local/Cellar/go/1.4.2/libexec/src/crypto/tls/generate_cert.go -ca=true -host="localhost" 
