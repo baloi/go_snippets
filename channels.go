@@ -3,6 +3,19 @@ package main
 import "fmt"
 
 func main() {
+	function_channel()
+	simple_channel()
+}
+
+func simple_channel() {
+	ch := make(chan int, 2)
+	ch <- 1
+	ch <- 2
+	fmt.Println(<-ch)
+	fmt.Println(<-ch)
+}
+
+func function_channel() {
 	// Create a new channel with make (chan val-type)
 	// Channels are typed by the values they convey
 	messages := make(chan string)
@@ -16,4 +29,5 @@ func main() {
 	msg := <-messages
 
 	fmt.Println(msg)
+
 }
